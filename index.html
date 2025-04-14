@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Мой Блокнот</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-book"></i> Мой Блокнот</h1>
+            <nav>
+                <a href="#" class="active" id="notes-tab"><i class="fas fa-sticky-note"></i> Заметки</a>
+                <a href="trash.html" id="trash-tab"><i class="fas fa-trash"></i> Корзина</a>
+            </nav>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Поиск заметок..." autocapitalize="off">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="note-editor">
+            <input type="text" id="note-title" placeholder="Заголовок" autocapitalize="sentences">
+            <textarea id="note-content" placeholder="Начните писать здесь..." autocapitalize="sentences"></textarea>
+            <div class="editor-actions">
+                <button id="save-note"><i class="fas fa-save"></i> Сохранить</button>
+                <button id="clear-note"><i class="fas fa-eraser"></i> Очистить</button>
+            </div>
+        </div>
+
+        <div class="notes-container">
+            <h2>Мои заметки</h2>
+            <div id="notes-list" class="notes-grid">
+                <!-- Заметки будут загружаться здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

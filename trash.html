@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Корзина - Мой Блокнот</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-trash"></i> Корзина</h1>
+            <nav>
+                <a href="index.html" id="notes-tab"><i class="fas fa-sticky-note"></i> Заметки</a>
+                <a href="#" class="active" id="trash-tab"><i class="fas fa-trash"></i> Корзина</a>
+            </nav>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="search-trash-input" placeholder="Поиск в корзине..." autocapitalize="off">
+            <button id="search-trash-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="trash-actions">
+            <button id="empty-trash"><i class="fas fa-trash"></i> Очистить корзину</button>
+            <button id="restore-all"><i class="fas fa-undo"></i> Восстановить все</button>
+        </div>
+
+        <div class="notes-container">
+            <h2>Удаленные заметки</h2>
+            <div id="trash-list" class="notes-grid">
+                <!-- Удаленные заметки будут загружаться здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
